@@ -1,6 +1,6 @@
 ﻿namespace DotNet.DesignPatterns.ServiceLocator;
 
-internal class ClientClass
+internal class ExampleClass
 {
     protected void Method()
     {
