@@ -1,16 +1,14 @@
-﻿using DotNet.DesignPatterns.ServiceLocator;
-
-namespace DesignPatterns.Factory;
+﻿namespace DesignPatterns.Factory;
 internal class ExampleClass
 {
     protected void Method()
     {
-        var serviceLocator = new ServiceLocator();
+        var applePieCreator = new ApplePieCreator();
+        var iceCreamCreator = new IceCreamCreator();
+        var iceCream = iceCreamCreator.FactoryMethod("Ice Cream Chocolate", "lactose free");
+        var applePie = applePieCreator.FactoryMethod("Apple Pie", "Without gluten");
 
-        var userService = serviceLocator.TryGetService<IUserService>();
-        var companyService = serviceLocator.TryGetService<ICompanyService>();
-
-        Console.WriteLine(userService.GetUserName(Guid.Empty));
-        Console.WriteLine(companyService.GetCompanyName(Guid.Empty));
+        Console.WriteLine("Created {0} {1}", iceCream.GetType().Name, iceCream.ToString());
+        Console.WriteLine("Created {0} {1}", applePie.GetType().Name, applePie.ToString());
     }
 }
