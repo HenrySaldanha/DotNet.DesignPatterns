@@ -1,4 +1,4 @@
-﻿namespace DotNet.DesignPatterns.ServiceLocator;
+﻿namespace DesignPatterns.ServiceLocator;
 
 internal class ServiceLocator : IServiceLocator
 {
